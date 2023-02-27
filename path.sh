@@ -7,7 +7,7 @@ if [[ $key == 'y' ]]; then
         echo "continued...";
 fi;
 if [[ -d $path ]]; then
-        echo "The directory $path is already exists!"
+        echo "The directory $path is already exist!"
 else
         mkdir $path && echo "The directory $path created!"
 fi;
