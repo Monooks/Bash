@@ -7,4 +7,4 @@
 * [Задание 4*](https://github.com/Monooks/Bash/blob/main/ip_port.sh)
 ##### к занятию 5.02 "Циклы и функции"
 * [Задание 1](https://github.com/Monooks/Bash/blob/main/100.sh)
-* [Задание 1](https://github.com/Monooks/Bash/blob/main/time.sh)
+* [Задание 2](https://github.com/Monooks/Bash/blob/main/time.sh)
