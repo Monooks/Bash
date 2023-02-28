@@ -24,7 +24,7 @@ while true; do
                 echo "${b} is not a number"
                 break
         fi
-        if [[ $op = '/' && $b -eq 0 ]]; then
+        if [[ $op = '/' && $b =~ ^[+-]?[0]+([.][0]+)?$ ]]; then
                 echo "dev by null"
                 break
         fi
