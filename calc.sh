@@ -11,14 +11,14 @@ while true; do
                 esac
         done
         read -p "Say me the first number?" a
-        if [[ $a =~ ^[0-9]+$ ]]; then
+        if [[ $a =~ ^[+-]?[0-9]+([.][0-9]+)?$ ]]; then
                 echo "${a} is a number"
         else
                 echo "${a} is not a number"
                 break
         fi
         read -p "Say me the second number?" b
-        if [[ $b =~ ^[0-9]+$ ]]; then
+        if [[ $b =~ ^[+-]?[0-9]+([.][0-9]+)?$ ]]; then
                 echo "${b} is a number"
         else
                 echo "${b} is not a number"
@@ -30,5 +30,5 @@ while true; do
         fi
         ans=$(echo "$a $op $b" | bc -l)
         printf "%s %s %s = %s\n\n" "$a" "$op" "$b" "$ans"
-        break
+break
 done
