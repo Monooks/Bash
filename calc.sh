@@ -1,5 +1,15 @@
 #!/bin/bash
 while true; do
+        PS3="What kind of operation do you want?"
+        select ans in add subtract multiply divide; do
+                case $ans in
+                        add) op='+' ; break ;;
+                        subtract) op='-' ; break ;;
+                        multiply) op='*' ; break ;;
+                        divide) op='/' ; break ;;
+                        *) echo "invalid response" ;;
+                esac
+        done
         read -p "Say me the first number?" a
         if [[ $a =~ ^[0-9]+$ ]]; then
                 echo "${a} is a number"
@@ -14,16 +24,10 @@ while true; do
                 echo "${b} is not a number"
                 break
         fi
-        PS3="What kind of operation do you want?"
-        select ans in add subtract multiply divide; do
-                case $ans in
-                        add) op='+' ; break ;;
-                        subtract) op='-' ; break ;;
-                        multiply) op='*' ; break ;;
-                        divide) op='/' ; break ;;
-                        *) echo "invalid response" ;;
-                esac
-        done
+        if [[ $op = '/' && $b -eq 0 ]]; then
+                echo "dev by null"
+                break
+        fi
         ans=$(echo "$a $op $b" | bc -l)
         printf "%s %s %s = %s\n\n" "$a" "$op" "$b" "$ans"
         break
