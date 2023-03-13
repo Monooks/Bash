@@ -10,3 +10,5 @@
 * [Задание 2](https://github.com/Monooks/Bash/blob/main/time.sh)
 * [Задание 3](https://github.com/Monooks/Bash/blob/main/avg_file_size.sh)
 * [Задание 4*](https://github.com/Monooks/Bash/blob/main/calc.sh)
+##### к занятию 5.05 "Разбор скриптов и и их написание"
+* [Задание 1](https://github.com/Monooks/Bash/blob/main/arping.sh)
